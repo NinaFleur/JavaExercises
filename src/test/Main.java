@@ -1,8 +1,6 @@
 package test;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList;
+import java.util.*;
 
 public class Main {
 
@@ -36,7 +34,41 @@ public class Main {
         dogNames.remove(0);
         System.out.println("After Bob and Dog escaped and now only " + dogNames.size() + " dog was in the shop");
 
-        HashMap hashMap = new HashMap();
+
+        //создаем хешмеп
+        Map<String, String> animals = new HashMap<>();
+
+        //добавляем элементы
+        animals.put("0", "dogs");
+        animals.put("1", "cats");
+        animals.put("2", "rabbits");
+        animals.put("3", "tigers");
+
+
+        //получаем набор элементов
+        Set<Map.Entry<String, String>> set = animals.entrySet();
+
+
+        //отображаем набор элементов
+        for (Map.Entry<String, String> animal : set){
+            System.out.println("Key: " + animal.getKey() + " Value: " + animal.getValue());
+        }
+
+        System.out.println("There are " + animals.size() + " kinds of animals in the list");
+
+
+        //выбираем все ключи
+        for (String key : animals.keySet()){
+            System.out.println("Key: " + key);
+        }
+
+        //выбираем все значения
+        for (String value : animals.values()){
+            System.out.println("Value: " + value);
+        }
+
+
+
     }
 }
 
